@@ -47,7 +47,6 @@ const Info = styled.div`
     margin-left: 10%;
     display: flex;
     flex-direction: column;
-    /* background-color: tomato; */
 `;
 
 const Title = styled.h1`
