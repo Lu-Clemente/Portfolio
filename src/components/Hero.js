@@ -9,7 +9,7 @@ const Hero = ()=>{
                     <Title>Luciene Clemente</Title>
                     <Subtitle>Desenvolvedora Front-end web e mobile</Subtitle>
                     <Resume>
-                        <a href={"./assets/resume/Luciene-Clemente.pdf"} target="_blank">
+                        <a href={"./assets/resume/Luciene-Clemente.pdf"} target="_blank" rel="noreferrer">
                             <Button>Currículo</Button>
                         </a>
                     </Resume>
