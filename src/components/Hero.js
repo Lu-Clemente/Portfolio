@@ -62,6 +62,10 @@ const Subtitle = styled.p`
     width: 100%;
     text-align: right;
     font-size: ${(props) => props.theme.sizes.m};
+
+    @media screen and (max-width: 520px) {
+        text-align: left;
+    }
 `;
 
 const Resume = styled.div`
@@ -90,6 +94,15 @@ const Button = styled.div`
         background-color: ${(props) => props.theme.colors.primary1};
         color: #FFF;
         transition-duration: .4s;
+    }
+
+    @media screen and (max-width: 520px) {
+        margin-top: 40px;
+        margin-left: 0;
+        height: 45px;
+        width: 130px;
+        font-size: ${(props) => props.theme.sizes.p};
+        border-radius: 14px;
     }
 `;
 
@@ -156,6 +169,10 @@ const HeaderCurve = styled.svg`
     width: calc(172% + 1.3px);
     height: 138px;
     transform: rotateY(180deg);
+
+    @media screen and (max-width: 520px) {
+        height: 80px;
+    }
 
     .shape-fill {
         fill: ${(props) => props.theme.colors.primary1};;

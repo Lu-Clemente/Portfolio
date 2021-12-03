@@ -22,7 +22,7 @@ export default {
   sizes: {
     xpp: 'screen and (max-width: 640px)',
     pp: 'screen and (max-width: 640px)',
-    p: 'screen and (max-width: 768px)',
+    p: '16px',
     m: '18px',
     g: '20px',
     gg: '32px',
