@@ -2,7 +2,10 @@ export default {
   // Temp fonts
   fonts: {
     title: "Space Grotesk, sans-serif",
-    main: "Space Grotesk, sans-serif"
+    main: "Space Grotesk, sans-serif",
+    codehide: "CodeHide",
+    prymaryText: "Baloo",
+    prymaryTitle: "PoiretOne",
   },
   // Colors for layout
 

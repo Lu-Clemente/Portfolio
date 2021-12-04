@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
+
 const Hero = ()=>{
     return (
         <>
@@ -16,6 +17,18 @@ const Hero = ()=>{
                 </Info>
                 <Right>
                     {/* <Profile src={ "./assets/img/profile.jpg" } /> */}
+                    <Code1>
+                        Seja bem vindo(a) ao meu portifólio pessoal.
+                        <br />
+                        Aqui você poderá conhecer um pouquinho de mim e do meu trabalho.
+                        <br />
+                        Fique a vontade para me contactar em minhas redes sociais ou por email.
+                    </Code1>
+                    <Code2>
+                        Seja bem vindo(a) ao meu portifólio pessoal.
+                        <br />
+                        Aqui você poderá conhecer um pouquinho de mim e do meu trabalho.
+                    </Code2>
                 </Right>
                 {/* <Curve /> */}
                 
@@ -48,20 +61,42 @@ const Info = styled.div`
     display: flex;
     flex-direction: column;
     /* background-color: tomato; */
+
+    @media screen and (max-width: 728px) {
+        width: 50vw;
+    }
 `;
 
 const Title = styled.h1`
-    font-family: ${(props) => props.theme.fonts.main};
-    font-size: ${(props) => props.theme.sizes.xxg};
+    font-family: ${(props) => props.theme.fonts.prymaryTitle};
+    font-size: 60px;
     color: #fff;
     margin-top: 50px;
     text-align: right;
+    margin-bottom: 20px;
+
+    @media screen and (max-width: 1280px) {
+        font-size: ${(props) => props.theme.sizes.xxg};
+    }
+
+    @media screen and (max-width: 580px) {
+        text-align: start;
+    }
 `;
 
 const Subtitle = styled.p`
     width: 100%;
     text-align: right;
-    font-size: ${(props) => props.theme.sizes.m};
+    font-size: 22px;
+
+    @media screen and (max-width: 1280px) {
+        font-size: ${(props) => props.theme.sizes.g};
+    }
+
+    @media screen and (max-width: 580px) {
+        width: 80%;
+        text-align: left;
+    }
 `;
 
 const Resume = styled.div`
@@ -91,17 +126,66 @@ const Button = styled.div`
         color: #FFF;
         transition-duration: .4s;
     }
+
+    @media screen and (max-width: 520px) {
+        margin-top: 40px;
+        margin-left: 0;
+        height: 45px;
+        width: 130px;
+        font-size: ${(props) => props.theme.sizes.p};
+        border-radius: 14px;
+    }
 `;
 
 const Right = styled.div`
     width: 35%;
     height: 450px;
     margin-right: 10%;
-    /* background-color: blueviolet; */
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    position: relative;
+    /* position: relative; */
+    /* background-color: yellowgreen; */
+
+    @media screen and (max-width: 728px) {
+        width: 50vw;
+    }
+`;
+
+const Code1 = styled.p`
+    font-family: ${(props) => props.theme.fonts.codehide};
+    width: 300px;
+    line-height: 26px;
+    font-size: ${(props) => props.theme.sizes.g};
+    margin-top: 50px;
+
+    @media screen and (max-width: 728px) {
+        line-height: 20px;
+        width: 90%;
+        margin-left: 30px;
+    }
+    @media screen and (max-width: 520px) {
+        display: none;
+    }
+`;
+
+const Code2 = styled.p`
+    font-family: ${(props) => props.theme.fonts.codehide};
+    width: 300px;
+    line-height: 26px;
+    font-size: ${(props) => props.theme.sizes.g};
+    margin-top: 50px;
+    display: none;
+
+    @media screen and (max-width: 728px) {
+        line-height: 20px;
+        width: 90%;
+        margin-left: 30px;
+    }
+
+    @media screen and (max-width: 520px) {
+        display: inline;
+    }
 `;
 
 const Profile = styled.img`
@@ -159,6 +243,14 @@ const HeaderCurve = styled.svg`
 
     .shape-fill {
         fill: ${(props) => props.theme.colors.primary1};;
+    }
+
+    @media screen and (max-width: 728px) {
+        height: 100px;
+    }
+
+    @media screen and (max-width: 520px) {
+        height: 80px;
     }
 `;
 
