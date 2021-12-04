@@ -10,12 +10,13 @@ const Hero = ()=>{
                     <Title>Luciene Clemente</Title>
                     <Subtitle>Desenvolvedora Front-end web e mobile</Subtitle>
                     <Resume>
-                        <a href={"./assets/resume/Luciene-Clemente.pdf"} target={"_blank"}>
+                        <a href={"./assets/resume/Luciene-Clemente.pdf"} target="_blank" rel="noreferrer">
                             <Button>Currículo</Button>
                         </a>
                     </Resume>
                 </Info>
                 <Right>
+
                     {/* <Profile src={ "./assets/img/profile.jpg" } /> */}
                     <Code1>
                         Seja bem vindo(a) ao meu portifólio pessoal.
@@ -27,13 +28,14 @@ const Hero = ()=>{
                     <Code2>
                         Seja bem vindo(a) ao meu portifólio. Conheça meu trabalho...
                     </Code2>
+
                 </Right>
                 {/* <Curve /> */}
                 
                 <SvgCurve>
                     <HeaderCurve>
                         <svg data-name="Layer 1" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+                            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" className="shape-fill"></path>
                         </svg>
                     </HeaderCurve>
                 </SvgCurve>
@@ -94,6 +96,10 @@ const Subtitle = styled.p`
 
     @media screen and (max-width: 580px) {
         width: 80%;
+        font-size: ${(props) => props.theme.sizes.m};
+    }
+
+    @media screen and (max-width: 520px) {
         text-align: left;
         font-size: ${(props) => props.theme.sizes.m};
     }
@@ -243,6 +249,10 @@ const HeaderCurve = styled.svg`
     width: calc(172% + 1.3px);
     height: 138px;
     transform: rotateY(180deg);
+
+    @media screen and (max-width: 520px) {
+        height: 80px;
+    }
 
     .shape-fill {
         fill: ${(props) => props.theme.colors.primary1};;
