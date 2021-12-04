@@ -114,6 +114,8 @@ const Information = styled.div`
     @media screen and (max-width: 1080px) {
         margin-top: 0;
         width: 80%;
+        height: fit-content;
+        margin-bottom: 50px;
     }
 `;
 
