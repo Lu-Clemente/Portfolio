@@ -10,6 +10,25 @@ const GlobalStyles = createGlobalStyle`
   html {
     font-size: 62.5%;
     scroll-behavior: smooth;
+
+    @font-face {
+        font-family: 'CodeHide';
+        font-weight: normal;
+        font-style: normal;
+        src: url("./assets/fonts/FlowCircularRegular.ttf");
+    }
+    @font-face {
+        font-family: 'PoiretOne';
+        font-weight: normal;
+        font-style: normal;
+        src: url("./assets/fonts/PoiretOne-Regular.ttf");
+    }
+    @font-face {
+        font-family: 'Baloo';
+        font-weight: normal;
+        font-style: normal;
+        src: url("./assets/fonts/BalooBhaijaan2-VariableFont_wght.ttf");
+    }
   }
 
   body {
