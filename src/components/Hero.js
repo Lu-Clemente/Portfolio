@@ -103,7 +103,7 @@ const Menu = styled.ul`
     }
 
     @media ${(props) => props.theme.breakpoints.md} {
-        display: none;
+        /* display: none; */
     }
 `;
 
@@ -114,7 +114,7 @@ const Burger = styled.div`
     background-color: white;
 
     @media ${(props) => props.theme.breakpoints.md} {
-        display: block;
+        /* display: block; */
     }
 `;
 
@@ -203,8 +203,8 @@ const Button = styled.div`
     }
 
     @media ${(props) => props.theme.breakpoints.sm} {
+        margin: 0 auto;
         margin-top: 40px;
-        margin-left: 0;
         height: 45px;
         width: 130px;
         font-size: ${(props) => props.theme.sizes.p};
