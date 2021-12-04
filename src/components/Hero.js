@@ -25,9 +25,7 @@ const Hero = ()=>{
                         Fique a vontade para me contactar em minhas redes sociais ou por email.
                     </Code1>
                     <Code2>
-                        Seja bem vindo(a) ao meu portifólio pessoal.
-                        <br />
-                        Aqui você poderá conhecer um pouquinho de mim e do meu trabalho.
+                        Seja bem vindo(a) ao meu portifólio. Conheça meu trabalho...
                     </Code2>
                 </Right>
                 {/* <Curve /> */}
@@ -46,7 +44,7 @@ const Hero = ()=>{
 
 const Painel = styled.div`
     width: 100%;
-    height: 450px;
+    height: 500px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -81,6 +79,7 @@ const Title = styled.h1`
 
     @media screen and (max-width: 580px) {
         text-align: start;
+        font-size: ${(props) => props.theme.sizes.xg};
     }
 `;
 
@@ -96,6 +95,7 @@ const Subtitle = styled.p`
     @media screen and (max-width: 580px) {
         width: 80%;
         text-align: left;
+        font-size: ${(props) => props.theme.sizes.m};
     }
 `;
 
@@ -113,13 +113,13 @@ const Button = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: ${(props) => props.theme.sizes.g};
+    font-size: ${(props) => props.theme.sizes.gg};
+    letter-spacing: 3px;
     border-radius: 20px;
     border: 2px solid ${(props) => props.theme.colors.primary1};
     color: ${(props) => props.theme.colors.primary1};
     cursor: pointer;
     font-weight: 500;
-    text-transform: uppercase;
 
     &:hover {
         background-color: ${(props) => props.theme.colors.primary1};
@@ -185,6 +185,9 @@ const Code2 = styled.p`
 
     @media screen and (max-width: 520px) {
         display: inline;
+        margin-top: 130px;
+        font-size: ${(props) => props.theme.sizes.m};
+        line-height: 17px;
     }
 `;
 
