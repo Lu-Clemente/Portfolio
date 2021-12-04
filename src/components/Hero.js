@@ -4,9 +4,20 @@ import styled from "styled-components";
 
 const Hero = ()=>{
     return (
-        <>
-            <Painel>
-                <Info>
+        <Painel>
+
+                <Navegation>
+                    <Menu>
+                        <a href="#about"><li>Sobre</li></a>
+                        <li>Projetos</li>
+                        <li>Contato</li>
+                    </Menu>
+                    <Burger></Burger>
+                </Navegation>
+
+            <Info>
+
+                <Left>
                     <Title>Luciene Clemente</Title>
                     <Subtitle>Desenvolvedora Front-end web e mobile</Subtitle>
                     <Resume>
@@ -14,10 +25,9 @@ const Hero = ()=>{
                             <Button>Currículo</Button>
                         </a>
                     </Resume>
-                </Info>
-                <Right>
+                </Left>
 
-                    {/* <Profile src={ "./assets/img/profile.jpg" } /> */}
+                <Right>
                     <Code1>
                         Seja bem vindo(a) ao meu portifólio pessoal.
                         <br />
@@ -28,33 +38,87 @@ const Hero = ()=>{
                     <Code2>
                         Seja bem vindo(a) ao meu portifólio. Conheça meu trabalho...
                     </Code2>
-
                 </Right>
-                {/* <Curve /> */}
+
+            </Info>
                 
-                <SvgCurve>
-                    <HeaderCurve>
-                        <svg data-name="Layer 1" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" className="shape-fill"></path>
-                        </svg>
-                    </HeaderCurve>
-                </SvgCurve>
-            </Painel>
-        </>
+            <SvgCurve>
+                <HeaderCurve>
+                    <svg data-name="Layer 1" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" className="shape-fill"></path>
+                    </svg>
+                </HeaderCurve>
+            </SvgCurve>
+
+        </Painel>
     );
 }
 
 const Painel = styled.div`
-    width: 100%;
-    height: 500px;
+    width: 100vw;
+    height: 600px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
     position: relative;
 `;
 
 const Info = styled.div`
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (min-width: 1440px) {
+        width: 80vw;
+        margin: 0 auto;
+    }
+`;
+
+const Navegation = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    @media screen and (min-width: 1440px) {
+        width: 80%;
+        margin:  0 auto;
+    }
+`;
+
+const Menu = styled.ul`
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    font-size: 23px;
+    font-family: ${(props) => props.theme.fonts.prymaryText};
+
+    li {
+        cursor: pointer;
+        padding: 20px;
+
+        &:hover {
+            transform: scale(115%);
+        }
+    }
+
+    @media ${(props) => props.theme.breakpoints.md} {
+        display: none;
+    }
+`;
+
+const Burger = styled.div`
+    display: none;
+    height: 40px;
+    width: 40px;
+    background-color: white;
+
+    @media ${(props) => props.theme.breakpoints.md} {
+        display: block;
+    }
+`;
+
+const Left = styled.div`
     height: 450px;
     width: 35%;
     margin-left: 10%;
@@ -62,8 +126,9 @@ const Info = styled.div`
     flex-direction: column;
     /* background-color: tomato; */
 
-    @media screen and (max-width: 728px) {
-        width: 50vw;
+    @media ${(props) => props.theme.breakpoints.md} {
+        width: 50%;
+        /* width: 50vw; */
     }
 `;
 
@@ -75,7 +140,7 @@ const Title = styled.h1`
     text-align: right;
     margin-bottom: 20px;
 
-    @media screen and (max-width: 1280px) {
+    @media ${(props) => props.theme.breakpoints.xl} {
         font-size: ${(props) => props.theme.sizes.xxg};
     }
 
@@ -90,7 +155,7 @@ const Subtitle = styled.p`
     text-align: right;
     font-size: 22px;
 
-    @media screen and (max-width: 1280px) {
+    @media ${(props) => props.theme.breakpoints.xl} {
         font-size: ${(props) => props.theme.sizes.g};
     }
 
@@ -99,7 +164,7 @@ const Subtitle = styled.p`
         font-size: ${(props) => props.theme.sizes.m};
     }
 
-    @media screen and (max-width: 520px) {
+    @media ${(props) => props.theme.breakpoints.sm} {
         text-align: left;
         font-size: ${(props) => props.theme.sizes.m};
     }
@@ -109,13 +174,15 @@ const Resume = styled.div`
     width: 210px;
     height: 60px;
     border-radius: 20px;
+    align-self: end;
+    margin-right: 10%;
 `;
 
 const Button = styled.div`
     background-color: transparent;
     width: 210px;
     height: 60px;
-    margin: 110px 0 0 40px;
+    margin: 100px 0 0 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -129,11 +196,13 @@ const Button = styled.div`
 
     &:hover {
         background-color: ${(props) => props.theme.colors.primary1};
-        color: #FFF;
+        color: ${(props) => props.theme.colors.background1};
+        font-weight: 700;
         transition-duration: .4s;
+        transform: scale(110%);
     }
 
-    @media screen and (max-width: 520px) {
+    @media ${(props) => props.theme.breakpoints.sm} {
         margin-top: 40px;
         margin-left: 0;
         height: 45px;
@@ -153,8 +222,9 @@ const Right = styled.div`
     /* position: relative; */
     /* background-color: yellowgreen; */
 
-    @media screen and (max-width: 728px) {
-        width: 50vw;
+    @media ${(props) => props.theme.breakpoints.md} {
+        /* width: 50vw; */
+        width: 50%;
     }
 `;
 
@@ -165,12 +235,12 @@ const Code1 = styled.p`
     font-size: ${(props) => props.theme.sizes.g};
     margin-top: 50px;
 
-    @media screen and (max-width: 728px) {
+    @media ${(props) => props.theme.breakpoints.md} {
         line-height: 20px;
         width: 90%;
         margin-left: 30px;
     }
-    @media screen and (max-width: 520px) {
+    @media ${(props) => props.theme.breakpoints.sm} {
         display: none;
     }
 `;
@@ -183,54 +253,17 @@ const Code2 = styled.p`
     margin-top: 50px;
     display: none;
 
-    @media screen and (max-width: 728px) {
+    @media ${(props) => props.theme.breakpoints.md} {
         line-height: 20px;
         width: 90%;
         margin-left: 30px;
     }
 
-    @media screen and (max-width: 520px) {
+    @media ${(props) => props.theme.breakpoints.sm} {
         display: inline;
         margin-top: 130px;
         font-size: ${(props) => props.theme.sizes.m};
         line-height: 17px;
-    }
-`;
-
-const Profile = styled.img`
-    height: 300px;
-    width: 300px;
-    object-fit: cover;
-    object-position: 0 -50px;
-    border-radius: 50%;
-    position: absolute;
-`;
-
-const Curve = styled.div`
-    position: absolute;
-    height: 225px;
-    width: 100%;
-    bottom: 0;
-
-    &::before {
-        content: "";
-        display: block;
-        position: absolute;
-        border-radius: 100% 50%;
-        width: 55%;
-        height: 100%;
-        background-color: #121212;
-        transform: translate(85%, 60%);
-    }
-    &::after {
-        content: "";
-        display: block;
-        position: absolute;
-        border-radius: 100% 50%;
-        width: 55%;
-        height: 100%;
-        background-color: teal;
-        transform: translate(-4%, 40%);
     }
 `;
 
@@ -250,7 +283,7 @@ const HeaderCurve = styled.svg`
     height: 138px;
     transform: rotateY(180deg);
 
-    @media screen and (max-width: 520px) {
+    @media ${(props) => props.theme.breakpoints.sm} {
         height: 80px;
     }
 
@@ -258,11 +291,11 @@ const HeaderCurve = styled.svg`
         fill: ${(props) => props.theme.colors.primary1};;
     }
 
-    @media screen and (max-width: 728px) {
+    @media ${(props) => props.theme.breakpoints.md} {
         height: 100px;
     }
 
-    @media screen and (max-width: 520px) {
+    @media ${(props) => props.theme.breakpoints.sm} {
         height: 80px;
     }
 `;
