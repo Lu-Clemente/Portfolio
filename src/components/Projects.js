@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import SVG from "./SVG"
+import SVG from "./SVG";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faGithub,
@@ -9,47 +9,64 @@ import {
     faReact,
     faJsSquare,
 } from '@fortawesome/free-brands-svg-icons';
+import Showcase from "./Showcase";
 
 const Projects = ()=>{
+
+    const [isOpen, setIsOpen] = useState(false);
+
+    const openModal = ()=>{
+        setIsOpen(!isOpen)
+    }
+
     return (
-        <Wrapper>
-            <Container>
-                <Proj1>
-                    <ProjectName>Pure HTML, CSS & JavaScript</ProjectName>
+        <>
+            <Wrapper>
+
+                <Title>Portfólio</Title>
+
+                <Container>
+                    <Proj1 onClick={ openModal }>
+                        <ProjectName>HTML, CSS & JavaScript</ProjectName>
+                            <Icons>
+                                <FontAwesomeIcon icon={ faHtml5 } className="items" />
+                                <FontAwesomeIcon icon={ faCss3Alt } className="items" />
+                                <FontAwesomeIcon icon={ faJsSquare } className="items" />
+                            </Icons>
+                    </Proj1>
+                    <Proj2 onClick={ openModal }>
+                        <ProjectName>ReactJs</ProjectName>
                         <Icons>
-                            <FontAwesomeIcon icon={ faHtml5 } className="items" />
-                            <FontAwesomeIcon icon={ faCss3Alt } className="items" />
-                            <FontAwesomeIcon icon={ faJsSquare } className="items" />
+                            <FontAwesomeIcon icon={ faReact } className="items" />
                         </Icons>
-                </Proj1>
-                <Proj2>
-                    <ProjectName>ReactJs</ProjectName>
-                    <Icons>
-                        <FontAwesomeIcon icon={ faReact } className="items" />
-                    </Icons>
-                </Proj2>
-                <Proj3>
-                    <ProjectName>Flutter</ProjectName>
-                    <Icons>
-                        <img id="flutter-green" src="./assets/img/flutter.png" />
-                        <img id="flutter-black" src="./assets/img/flutter-bk-black.png" />
-                    </Icons>
-                </Proj3>
-                <Proj4>
-                    <ProjectName>React Native</ProjectName>
-                    <Icons>
-                        <FontAwesomeIcon icon={ faReact } className="items" />
-                    </Icons>
-                </Proj4>
-                <Proj5>
-                    <ProjectName>NextJs</ProjectName>
-                    <Icons>
-                        <SVG />
-                        {/* <FontAwesomeIcon icon={ faGithub } style={{ width: "80px", height: "80px", }} /> */}
-                    </Icons>
-                </Proj5>
-            </Container>
-        </Wrapper>
+                    </Proj2>
+                    <Proj3 onClick={ openModal }>
+                        <ProjectName>Flutter</ProjectName>
+                        <Icons>
+                            <img id="flutter-green" src="./assets/img/flutter.png" />
+                            <img id="flutter-black" src="./assets/img/flutter-bk-black.png" />
+                        </Icons>
+                    </Proj3>
+                    <Proj4 onClick={ openModal }>
+                        <ProjectName>React Native</ProjectName>
+                        <Icons>
+                            <FontAwesomeIcon icon={ faReact } className="items" />
+                        </Icons>
+                    </Proj4>
+                    <Proj5 onClick={ openModal }>
+                        <ProjectName>NextJs</ProjectName>
+                        <Icons>
+                            <SVG />
+                            {/* <FontAwesomeIcon icon={ faGithub } style={{ width: "80px", height: "80px", }} /> */}
+                        </Icons>
+                    </Proj5>
+                </Container>
+                
+                <Showcase showModal={ isOpen } setShowModal={ setIsOpen } />
+
+            </Wrapper>
+            
+        </>
     );
 }
 
@@ -57,6 +74,15 @@ const Wrapper = styled.div`
     margin: 80px 0;
     width: 100vw;
     background-color: ${(props) => props.theme.colors.background1};
+    position: relative;
+`;
+
+const Title = styled.h2`
+    font-family: ${(props) => props.theme.fonts.main};
+    font-size: ${(props) => props.theme.sizes.xxg};
+    color: #FFFFFF;
+    text-align: center;
+    margin: 40px 0;
 `;
 
 const Icons = styled.div`
@@ -72,6 +98,7 @@ const Icons = styled.div`
     @media ${(props) => props.theme.breakpoints.sm} {
         .items {
             width: 50px;
+            height: 50px;
         }
     }
     
@@ -89,6 +116,10 @@ const Container = styled.div`
         "Proj1 Proj1 Proj2"
         "Proj3 Proj4 Proj2"
         "Proj3 Proj4 Proj5";
+
+    @media ${(props) => props.theme.breakpoints.sm} {
+        height: 400px;
+    }
 `;
     
 const Proj1 = styled.div`
@@ -135,6 +166,7 @@ const Proj3 = styled.div`
 
     #flutter-green, #flutter-black {
         width: 80px;
+        height: 80px;
     }
 
     #flutter-black {
@@ -157,6 +189,7 @@ const Proj3 = styled.div`
     @media ${(props) => props.theme.breakpoints.sm} {
         #flutter-green, #flutter-black {
             width: 50px;
+            height: 50px;
         }
     }
 `;
@@ -204,6 +237,7 @@ const Proj5 = styled.div`
 
         SVG{
             width: 60px;
+            height: 50px;
         }
     }
 `;

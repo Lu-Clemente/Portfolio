@@ -120,23 +120,21 @@ const Burger = styled.div`
 
 const Left = styled.div`
     height: 450px;
-    width: 35%;
-    margin-left: 10%;
+    width: 45%;
     display: flex;
     flex-direction: column;
-    /* background-color: tomato; */
+    margin-left: 5%;
 
     @media ${(props) => props.theme.breakpoints.md} {
         width: 50%;
-        /* width: 50vw; */
     }
 `;
 
 const Title = styled.h1`
     font-family: ${(props) => props.theme.fonts.prymaryTitle};
-    font-size: 60px;
+    font-size: 70px;
     color: #fff;
-    margin-top: 50px;
+    margin-top: 20px;
     text-align: right;
     margin-bottom: 20px;
 
@@ -175,7 +173,7 @@ const Resume = styled.div`
     height: 60px;
     border-radius: 20px;
     align-self: end;
-    margin-right: 10%;
+    margin-right: 15%;
 `;
 
 const Button = styled.div`
