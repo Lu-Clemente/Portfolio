@@ -49,12 +49,12 @@ const GlobalStyles = createGlobalStyle`
       border: 3px solid transparent;
       background-clip: padding-box;
       border-radius: 10px;
-      background-color: rgba(0,0,0,.5);
+      background-color: rgba(0,0,0);
       cursor: auto;
     }
 
     ::-webkit-scrollbar-thumb:hover {
-      background-color: teal; 
+      background-color: ${(props) => props.theme.colors.primary1}; 
     }
 
   }
