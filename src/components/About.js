@@ -40,6 +40,11 @@ const About = ()=>{
                     <Description>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </Description>
+                    <blockquote className="quote">
+                        "I will show you how great I am."
+                        <br />
+                        <span>Muhammad Ali</span>
+                    </blockquote>
 
             </Information>
 
@@ -110,6 +115,19 @@ const Information = styled.div`
     margin-top: 70px;
     display: flex;
     flex-direction: column;
+
+    .quote {
+        color: #FFFFFF;
+        text-align: end;
+        font-size: ${(props) => props.theme.sizes.g};
+        font-weight: 500;
+        margin: 50px 40px 0 0;
+        text-shadow: 2px 2px 10px rgba(0,0,0,.65);
+    }
+
+    .quote span {
+        font-size: ${(props) => props.theme.sizes.p};
+    }
 
     @media screen and (max-width: 1080px) {
         margin-top: 0;
