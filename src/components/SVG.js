@@ -20,7 +20,7 @@ const SVG = ()=>{
 }
 
 const Next = styled.svg`
-    height: 80px;
+    height: 50px;
     width: 80px;
 `;
 
