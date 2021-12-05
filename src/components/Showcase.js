@@ -28,7 +28,7 @@ const Modal = styled.div`
     width: 80vw;
     background-color: rgba(0,0,0,.9);
     position: absolute;
-    top: 0;
+    top: 15%;
     left: 50%;
     transform: translateX(-50%);
     display: flex;

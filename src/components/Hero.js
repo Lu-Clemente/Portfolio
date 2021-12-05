@@ -9,7 +9,7 @@ const Hero = ()=>{
                 <Navegation>
                     <Menu>
                         <a href="#about"><li>Sobre</li></a>
-                        <li>Projetos</li>
+                        <a href="#projects"><li>Projetos</li></a>
                         <li>Contato</li>
                     </Menu>
                     <Burger></Burger>
@@ -99,6 +99,7 @@ const Menu = styled.ul`
 
         &:hover {
             transform: scale(115%);
+            color: ${(props) => props.theme.colors.secundary1};
         }
     }
 
