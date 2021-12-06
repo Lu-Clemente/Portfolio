@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import SVG from "./SVG";
-import mobilePersona from "../../public/assets/img/undraw_programmer.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faGithub,
@@ -10,14 +9,35 @@ import {
     faReact,
     faJsSquare,
 } from '@fortawesome/free-brands-svg-icons';
-import Showcase from "./Showcase";
+import Modal1 from "./Modal1";
+import Modal2 from "./Modal2";
+import Modal3 from "./Modal3";
+import Modal4 from "./Modal4";
+import Modal5 from "./Modal5";
+import { SliderData } from "./SliderData";
 
 const Projects = ()=>{
 
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen1, setIsOpen1] = useState(false);
+    const [isOpen2, setIsOpen2] = useState(false);
+    const [isOpen3, setIsOpen3] = useState(false);
+    const [isOpen4, setIsOpen4] = useState(false);
+    const [isOpen5, setIsOpen5] = useState(false);
 
-    const openModal = ()=>{
-        setIsOpen(!isOpen)
+    const openModal1 = ()=>{
+        setIsOpen1(!isOpen1);
+    }
+    const openModal2 = ()=>{
+        setIsOpen2(!isOpen2);
+    }
+    const openModal3 = ()=>{
+        setIsOpen3(!isOpen3);
+    }
+    const openModal4 = ()=>{
+        setIsOpen4(!isOpen4);
+    }
+    const openModal5 = ()=>{
+        setIsOpen5(!isOpen5);
     }
 
     return (
@@ -27,23 +47,23 @@ const Projects = ()=>{
                 <Title>Portfólio</Title>
 
                 <Container>
-                    <Proj1 onClick={ openModal }>
+                    <Proj1 onClick={ openModal1 }>
                         {/* <ProjectName>HTML, CSS & JavaScript</ProjectName> */}
-                        <ImageSVG src="./assets/img/undraw_web_developer.svg" id="svg-proj1" style={{ width: "160px" }} />
-                            <Icons>
-                                <FontAwesomeIcon icon={ faHtml5 } className="items" style={{ marginTop: "unset" }} />
-                                <FontAwesomeIcon icon={ faCss3Alt } className="items" style={{ marginTop: "unset"}} />
-                                <FontAwesomeIcon icon={ faJsSquare } className="items" style={{ marginTop: "unset"}} />
+                        <ImageSVG src="./assets/img/undraw_web_developer.svg" id="svg-proj1" />
+                            <Icons className="group">
+                                <FontAwesomeIcon icon={ faHtml5 } className="items items-respons" />
+                                <FontAwesomeIcon icon={ faCss3Alt } className="items items-respons"  />
+                                <FontAwesomeIcon icon={ faJsSquare } className="items items-respons"  />
                             </Icons>
                     </Proj1>
-                    <Proj2 onClick={ openModal }>
+                    <Proj2 onClick={ openModal2 }>
                         {/* <ProjectName>ReactJs</ProjectName> */}
                         <ImageSVG src="./assets/img/undraw_shared_workspace.svg" id="svg-proj2" />
                         <Icons>
                             <FontAwesomeIcon icon={ faReact } className="items" />
                         </Icons>
                     </Proj2>
-                    <Proj3 onClick={ openModal }>
+                    <Proj3 onClick={ openModal3 }>
                         {/* <ProjectName>Flutter</ProjectName> */}
                         <ImageSVG src="./assets/img/undraw_mobile_app.svg" />
                         <Icons>
@@ -51,14 +71,14 @@ const Projects = ()=>{
                             <img id="flutter-black" src="./assets/img/flutter-bk-black.png" />
                         </Icons>
                     </Proj3>
-                    <Proj4 onClick={ openModal }>
+                    <Proj4 onClick={ openModal4 }>
                         {/* <ProjectName>React Native</ProjectName> */}
                         <ImageSVG src="./assets/img/undraw_programmer.svg" />
                         <Icons>
                             <FontAwesomeIcon icon={ faReact } className="items" />
                         </Icons>
                     </Proj4>
-                    <Proj5 onClick={ openModal }>
+                    <Proj5 onClick={ openModal5 }>
                         <ImageSVG src="./assets/img/undraw_about_me.svg" />
                         {/* <ProjectName>NextJs</ProjectName> */}
                         <Icons>
@@ -68,7 +88,11 @@ const Projects = ()=>{
                     </Proj5>
                 </Container>
                 
-                <Showcase showModal={ isOpen } setShowModal={ setIsOpen } />
+                <Modal1 showModal={ isOpen1 } setShowModal={ setIsOpen1 } slides={ SliderData } />
+                <Modal2 showModal={ isOpen2 } setShowModal={ setIsOpen2 }  />
+                <Modal3 showModal={ isOpen3 } setShowModal={ setIsOpen3 }  />
+                <Modal4 showModal={ isOpen4 } setShowModal={ setIsOpen4 }  />
+                <Modal5 showModal={ isOpen5 } setShowModal={ setIsOpen5 }  />
 
             </Wrapper>
             
@@ -78,12 +102,8 @@ const Projects = ()=>{
 
 const ImageSVG = styled.img`
     width: 220px;
-    margin: 5px;
+    /* margin: 5px; */
     padding: 10px;
-
-    #svg-proj1 {
-        width: 160px;
-    }
 
     @media screen and (max-width: 1180px) {
         width: 90%;
@@ -116,12 +136,22 @@ const Icons = styled.div`
         margin-top: 20px;
     }
 
+    @media ${(props) => props.theme.breakpoints.md} {
+        .items-respons {
+            width: 20px !important; 
+            height: 20px !important;
+        }
+        .items {
+            margin: 0;
+        }
+    }
+
     @media ${(props) => props.theme.breakpoints.sm} {
         .items {
             width: 30px;
             height: 30px;
-            margin-top: 10px;
-            margin-bottom: 10px;
+            /* margin-top: 10px;
+            margin-bottom: 10px; */
         }
     }
 `;
@@ -129,7 +159,7 @@ const Icons = styled.div`
 const Container = styled.div`
     margin: 0 auto;
     width: 75vw;
-    height: 90vh;
+    height: 80vh;
     display: grid; 
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -140,12 +170,12 @@ const Container = styled.div`
         "Proj3 Proj4 Proj5";
 
     @media ${(props) => props.theme.breakpoints.sm} {
-        height: 400px;
+        height: 300px;
     }
 `;
     
 const Proj1 = styled.div`
-    border: 2px solid ${(props) => props.theme.colors.primary1};
+    border: 2px solid ${(props) => props.theme.colors.secundary1};
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -153,20 +183,38 @@ const Proj1 = styled.div`
     grid-area: Proj1;
     color: ${(props) => props.theme.colors.primary1};
 
+    #svg-proj1 {
+        width: 160px;
+
+        @media ${(props) => props.theme.breakpoints.sm} {
+            width: 100px;
+        }
+    }
+
+    .group {
+        display: flex;
+
+        @media ${(props) => props.theme.breakpoints.sm} {
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
     &:hover {
         transition-duration: .8s;
         background-color: #2CE8A3;
         color: ${(props) => props.theme.colors.background1};
+        border: 2px solid ${(props) => props.theme.colors.primary1};
     }
 
-    @media screen and (max-width: 1180px) {
+    /* @media screen and (max-width: 1180px) {
         flex-direction: column;
         justify-content: center;
-    }
+    } */
 `;
 const Proj2 = styled.div`
     grid-area: Proj2;
-    border: 2px solid ${(props) => props.theme.colors.primary1};
+    border: 2px solid ${(props) => props.theme.colors.secundary1};
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -178,11 +226,12 @@ const Proj2 = styled.div`
         transition-duration: .8s;
         background-color: #2CE8A3;
         color: black;
+        border: 2px solid ${(props) => props.theme.colors.primary1};
     }
 `;
 const Proj3 = styled.div`
     grid-area: Proj3;
-    border: 2px solid ${(props) => props.theme.colors.primary1};
+    border: 2px solid ${(props) => props.theme.colors.secundary1};
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -204,6 +253,7 @@ const Proj3 = styled.div`
         transition-duration: .8s;
         background-color: #2CE8A3;
         color: black;
+        border: 2px solid ${(props) => props.theme.colors.primary1};
 
         #flutter-green {
             display: none;
@@ -223,7 +273,7 @@ const Proj3 = styled.div`
 `;
 const Proj4 = styled.div`
     grid-area: Proj4;
-    border: 2px solid ${(props) => props.theme.colors.primary1};
+    border: 2px solid ${(props) => props.theme.colors.secundary1};
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -234,13 +284,14 @@ const Proj4 = styled.div`
     &:hover {
         transition-duration: .8s;
         background-color: #2CE8A3;
-        color: black
+        color: black;
+        border: 2px solid ${(props) => props.theme.colors.primary1};
     }
 `;
 
 const Proj5 = styled.div`
     grid-area: Proj5;
-    border: 2px solid ${(props) => props.theme.colors.primary1};
+    border: 2px solid ${(props) => props.theme.colors.secundary1};
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -251,6 +302,7 @@ const Proj5 = styled.div`
         transition-duration: .8s;
         background-color: #2CE8A3;
         color: black;
+        border: 2px solid ${(props) => props.theme.colors.primary1};
         
         SVG g{
             fill: #000000;
