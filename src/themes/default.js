@@ -12,7 +12,8 @@ export default {
     // primary1: "#43E8AC",
     primary1: "#2CE8A3",
     // secundary1: "#764FE8",
-    secundary1: "#E8D620",
+    // secundary1: "#E8D620",
+    secundary1: "#764FE8",
     background1: "#121212",
   },
 

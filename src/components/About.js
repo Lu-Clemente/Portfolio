@@ -91,7 +91,7 @@ const Profile = styled.div`
 const Title = styled.h2`
     font-family: ${(props) => props.theme.fonts.main};
     font-size: ${(props) => props.theme.sizes.xg};
-    color: #000;
+    color: ${(props) => props.theme.colors.secundary1};
     text-align: center;
     margin: 20px 20px 0 40px;
 `;
@@ -117,12 +117,12 @@ const Information = styled.div`
     flex-direction: column;
 
     .quote {
-        color: #FFFFFF;
+        color: #000;
         text-align: end;
         font-size: ${(props) => props.theme.sizes.g};
         font-weight: 500;
         margin: 50px 40px 0 0;
-        text-shadow: 2px 2px 10px rgba(0,0,0,.65);
+        /*text-shadow: 2px 2px 10px rgba(0,0,0,.65);*/
     }
 
     .quote span {
@@ -149,6 +149,7 @@ const Icons = styled.div`
     width: 80px;
     height: 80px;
     color: ${(props) => props.theme.colors.background1};
+    color: ${(props) => props.theme.colors.secundary1};
 `;
 
 const Description = styled.p`
