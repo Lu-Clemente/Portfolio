@@ -14,7 +14,7 @@ import Modal2 from "./Modal2";
 import Modal3 from "./Modal3";
 import Modal4 from "./Modal4";
 import Modal5 from "./Modal5";
-import { SliderData } from "./SliderData";
+import { SliderData, SliderData2, SliderData3, SliderData4, SliderData5 } from "./SliderData";
 
 const Projects = ()=>{
 
@@ -89,10 +89,10 @@ const Projects = ()=>{
                 </Container>
                 
                 <Modal1 showModal={ isOpen1 } setShowModal={ setIsOpen1 } slides={ SliderData } />
-                <Modal2 showModal={ isOpen2 } setShowModal={ setIsOpen2 }  />
-                <Modal3 showModal={ isOpen3 } setShowModal={ setIsOpen3 }  />
-                <Modal4 showModal={ isOpen4 } setShowModal={ setIsOpen4 }  />
-                <Modal5 showModal={ isOpen5 } setShowModal={ setIsOpen5 }  />
+                <Modal2 showModal={ isOpen2 } setShowModal={ setIsOpen2 } slides={ SliderData2 } />
+                <Modal3 showModal={ isOpen3 } setShowModal={ setIsOpen3 }  slides={ SliderData3 } />
+                <Modal4 showModal={ isOpen4 } setShowModal={ setIsOpen4 } slides={ SliderData4 } />
+                <Modal5 showModal={ isOpen5 } setShowModal={ setIsOpen5 } slides={ SliderData5 } />
 
             </Wrapper>
             
