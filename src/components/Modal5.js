@@ -4,7 +4,9 @@ import {
     faTimes,
 } from '@fortawesome/free-solid-svg-icons';
 
-const Showcase = ({showModal,setShowModal})=>{
+const Modal5 = (
+    {showModal,setShowModal}
+)=>{
 
     return (
         <>
@@ -15,6 +17,7 @@ const Showcase = ({showModal,setShowModal})=>{
                         <FontAwesomeIcon icon={ faTimes } className="item" />
                     </Times>
                 </Close>
+                <Slider></Slider>
             </Modal>
             :
             null
@@ -32,7 +35,6 @@ const Modal = styled.div`
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    /* display: none; */
 `;
 const Close = styled.div`
     width: 80vw;
@@ -45,7 +47,7 @@ const Times = styled.div`
     padding: 10px;
     margin: 5px;
     cursor: pointer;
-    color: #FFF;
+    color: ${(props) => props.theme.colors.primary1};;
 
     .item {
         width: 40px;
@@ -53,9 +55,15 @@ const Times = styled.div`
     }
 
     &:hover {
-        color: unset;
+        color: #FFFFFF;
         transition-duration: .5s;
     }
 `;
 
-export default Showcase;
+const Slider = styled.div`
+    height: 300px;
+    width: 300px;
+    background-color: salmon;
+`;
+
+export default Modal5;
