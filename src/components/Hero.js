@@ -99,7 +99,6 @@ const Menu = styled.ul`
 
         &:hover {
             transform: scale(115%);
-            color: ${(props) => props.theme.colors.secundary1};
         }
     }
 

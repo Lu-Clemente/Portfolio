@@ -127,6 +127,7 @@ const Slider = styled.div`
     .arrow {
         width: 80px;
         height: 80px;
+        color: ${(props) => props.theme.colors.secundary1};
 
         &:hover {
             transform: scale(108%);

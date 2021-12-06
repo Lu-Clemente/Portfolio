@@ -120,9 +120,8 @@ const Wrapper = styled.div`
 const Title = styled.h2`
     font-family: ${(props) => props.theme.fonts.main};
     font-size: ${(props) => props.theme.sizes.xxg};
-    color: ${(props) => props.theme.colors.secundary1};
     text-align: center;
-    margin: 40px 0;
+    margin: 55px 0;
 `;
 
 const Icons = styled.div`
