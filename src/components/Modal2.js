@@ -62,7 +62,7 @@ const Modal2 = ({showModal,setShowModal,slides})=>{
 
                 <a
                 href="https://www.vemprapalante.com/" target="_blank" rel="noreferrer">
-                    <Info>Pa'lante - www.vemprapalante.com</Info>
+                    <Info>Palante - www.vemprapalante.com</Info>
                 </a>
 
             </Modal>
