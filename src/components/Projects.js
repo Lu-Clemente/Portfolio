@@ -48,7 +48,6 @@ const Projects = ()=>{
 
                 <Container>
                     <Proj1 onClick={ openModal1 }>
-                        {/* <ProjectName>HTML, CSS & JavaScript</ProjectName> */}
                         <ImageSVG src="./assets/img/undraw_web_developer.svg" id="svg-proj1" />
                             <Icons className="group">
                                 <FontAwesomeIcon icon={ faHtml5 } className="items items-respons" />
@@ -57,14 +56,12 @@ const Projects = ()=>{
                             </Icons>
                     </Proj1>
                     <Proj2 onClick={ openModal2 }>
-                        {/* <ProjectName>ReactJs</ProjectName> */}
                         <ImageSVG src="./assets/img/undraw_shared_workspace.svg" id="svg-proj2" />
                         <Icons>
                             <FontAwesomeIcon icon={ faReact } className="items" />
                         </Icons>
                     </Proj2>
                     <Proj3 onClick={ openModal3 }>
-                        {/* <ProjectName>Flutter</ProjectName> */}
                         <ImageSVG src="./assets/img/undraw_mobile_app.svg" />
                         <Icons>
                             <img id="flutter-green" src="./assets/img/flutter.png" />
@@ -72,7 +69,6 @@ const Projects = ()=>{
                         </Icons>
                     </Proj3>
                     <Proj4 onClick={ openModal4 }>
-                        {/* <ProjectName>React Native</ProjectName> */}
                         <ImageSVG src="./assets/img/undraw_programmer.svg" />
                         <Icons>
                             <FontAwesomeIcon icon={ faReact } className="items" />
@@ -80,7 +76,6 @@ const Projects = ()=>{
                     </Proj4>
                     <Proj5 onClick={ openModal5 }>
                         <ImageSVG src="./assets/img/undraw_about_me.svg" />
-                        {/* <ProjectName>NextJs</ProjectName> */}
                         <Icons>
                             <SVG />
                             {/* <FontAwesomeIcon icon={ faGithub } style={{ width: "80px", height: "80px", }} /> */}
@@ -319,12 +314,6 @@ const Proj5 = styled.div`
             height: 30px;
         }
     }
-`;
-
-const ProjectName = styled.span`
-    color: #FFF;
-    padding: 10px;
-    text-align: center;
 `;
 
 export default Projects;

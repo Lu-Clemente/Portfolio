@@ -62,7 +62,7 @@ const Modal3 = ({showModal,setShowModal,slides})=>{
 
                 <a
                 href="https://github.com/Lu-Clemente/Instagram-Clone-Flutter" target="_blank" rel="noreferrer">
-                    <Info>Clone Instagram em FLutter - github.com/Lu-Clemente/Instagram-Clone-Flutter</Info>
+                    <Info>Clone Instagram em Flutter - github.com/Lu-Clemente/Instagram-Clone-Flutter</Info>
                 </a>
 
             </Modal>

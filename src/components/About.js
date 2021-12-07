@@ -38,7 +38,15 @@ const About = ()=>{
                     </Devices>
 
                     <Description>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        Saudações visitante! Me chamo Luciene, e sou mais uma jovem que a tecnologia pegou pela mão e apresentou um novo mundo.
+                        <br /> <br />
+                        Atuo como desenvolvedora web e mobile front-end.
+                        <br />
+                        Tecnologias de conhecimento: <strong>JavaScript, NextJs, ReactJs, React Native, Dart, Flutter, HTML5 e CSS3.</strong>
+                        <br />
+                        Logo a baixo você encontra alguns trabalhos e projetos meus. Você pode vê-los, visitá-los e em alguns, até mesmo encontrar o source code no meu perfil do Github.
+                        <br/>
+                        Sinta-se a vontade também para <a href="#contact"><em>entrar em contato comigo</em></a>.
                     </Description>
                     <blockquote className="quote">
                         I will show you how great I am.
@@ -102,6 +110,8 @@ const Picture = styled.img`
     object-fit: cover;
     object-position: 0 -50px;
     border-radius: 50%;
+    /* border: 2px solid ${(props) => props.theme.colors.secundary1}; */
+    box-shadow: 5px 5px 10px ${(props) => props.theme.colors.background1};
 
     @media ${(props) => props.theme.breakpoints.lg} {
         transform: scale(80%);
@@ -117,11 +127,11 @@ const Information = styled.div`
     flex-direction: column;
 
     .quote {
-        color: #000;
+        color: ${(props) => props.theme.colors.background1};
         text-align: end;
         font-size: ${(props) => props.theme.sizes.g};
         font-weight: 500;
-        margin: 50px 40px 0 0;
+        margin: 40px 40px 10px 0;
         /*text-shadow: 2px 2px 10px rgba(0,0,0,.65);*/
     }
 
@@ -160,7 +170,7 @@ const Description = styled.p`
     text-align: justify;
     color: ${(props) => props.theme.colors.background1};
     font-size: ${(props) => props.theme.sizes.m};
-    line-height: 30px;
+    line-height: 28px;
 `;
 
 export default About;
