@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import SVG from "./SVG";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
