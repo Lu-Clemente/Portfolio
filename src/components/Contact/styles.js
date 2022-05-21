@@ -1,35 +1,6 @@
-import React from "react";
 import styled from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelopeOpen, faAngleRight
-} from '@fortawesome/free-solid-svg-icons';
 
-const Contact = ()=>{
-
-    return (
-        <Wrapper id="contact">
-            <Title>Entre em contato</Title>
-            <Flex>
-                <Left>
-
-                    {/* <FontAwesomeIcon icon={ faEnvelopeOpen } className="item" /> */}
-                    <ImageSVG src="./assets/img/undraw_message.svg" />
-
-                    <Resume>
-                        <a href={"./assets/resume/Luciene-Clemente.pdf"} target="_blank" rel="noreferrer">
-                            <Button>Currículo</Button>
-                        </a>
-                    </Resume>
-
-                </Left>
-                <Right>
-                </Right>
-            </Flex>
-        </Wrapper>
-    );
-}
-
-const Wrapper = styled.div`
+export const Wrapper = styled.div`
     height: 700px;
     width: 100%;
     display: flex;
@@ -41,14 +12,14 @@ const Wrapper = styled.div`
     }
 `;
 
-const Title = styled.h2`
+export const Title = styled.h2`
     font-family: ${(props) => props.theme.fonts.main};
     font-size: ${(props) => props.theme.sizes.xxg};
     text-align: center;
     margin: 55px 0;
 `;
 
-const Flex = styled.div`
+export const Flex = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,7 +28,7 @@ const Flex = styled.div`
     height: 500px;
 `;
 
-const Left = styled.div`
+export const Left = styled.div`
     height: 100%;
     width: 400px;
     width: 50%;
@@ -68,19 +39,19 @@ const Left = styled.div`
     align-items: center;
 `;
 
-const ImageSVG = styled.img`
+export const ImageSVG = styled.img`
     width: 260px;
     padding: 10px;
     transform: rotate(-10deg);
 `;
 
-const Resume = styled.div`
+export const Resume = styled.div`
     width: 210px;
     height: 60px;
     border-radius: 20px;
 `;
 
-const Button = styled.div`
+export const Button = styled.div`
     background-color: transparent;
     width: 210px;
     height: 60px;
@@ -105,11 +76,9 @@ const Button = styled.div`
 
 `;
 
-const Right = styled.div`
+export const Right = styled.div`
     height: 100%;
     width: 400px;
     width: 50%;
     /* background-color: dodgerblue; */
 `;
-
-export default Contact;

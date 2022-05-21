@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import React from "react";
+import { SVG } from './styles'
 
 const BackgroundSVG = ()=>{
 
@@ -6,10 +7,5 @@ const BackgroundSVG = ()=>{
         <SVG src="./assets/img/undraw_Programmer_re_owql.png" />
     );
 }
-
-const SVG = styled.img`
-    opacity: .8;
-    position: absolute;
-`;
 
 export default BackgroundSVG;

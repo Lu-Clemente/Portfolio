@@ -1,60 +1,6 @@
-import React from "react";
 import styled from "styled-components";
 
-
-const Hero = ()=>{
-    return (
-        <Painel>
-
-                <Navegation>
-                    <Menu>
-                        <a href="#about"><li>Sobre</li></a>
-                        <a href="#projects"><li>Projetos</li></a>
-                        <li>Contato</li>
-                    </Menu>
-                    <Burger></Burger>
-                </Navegation>
-
-            <Info>
-
-                <Left>
-                    <Title>Luciene Clemente</Title>
-                    <Subtitle>Desenvolvedora Front-end web e mobile</Subtitle>
-                    <Resume>
-                        <a href={"./assets/resume/Luciene-Clemente.pdf"} target="_blank" rel="noreferrer">
-                            <Button>Currículo</Button>
-                        </a>
-                    </Resume>
-                </Left>
-
-                <Right>
-                    <Code1>
-                        Seja bem vindo(a) ao meu portifólio pessoal.
-                        <br />
-                        Aqui você poderá conhecer um pouquinho de mim e do meu trabalho.
-                        <br />
-                        Fique a vontade para me contactar em minhas redes sociais ou por email.
-                    </Code1>
-                    <Code2>
-                        Seja bem vindo(a) ao meu portifólio. Conheça meu trabalho...
-                    </Code2>
-                </Right>
-
-            </Info>
-                
-            <SvgCurve>
-                <HeaderCurve>
-                    <svg data-name="Layer 1" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" className="shape-fill"></path>
-                    </svg>
-                </HeaderCurve>
-            </SvgCurve>
-
-        </Painel>
-    );
-}
-
-const Painel = styled.div`
+export const Painel = styled.div`
     width: 100vw;
     height: 600px;
     display: flex;
@@ -63,7 +9,7 @@ const Painel = styled.div`
     position: relative;
 `;
 
-const Info = styled.div`
+export const Info = styled.div`
     width: 100vw;
     display: flex;
     justify-content: space-between;
@@ -75,7 +21,7 @@ const Info = styled.div`
     }
 `;
 
-const Navegation = styled.div`
+export const Navegation = styled.div`
     width: 100%;
     display: flex;
     justify-content: center;
@@ -86,7 +32,7 @@ const Navegation = styled.div`
     }
 `;
 
-const Menu = styled.ul`
+export const Menu = styled.ul`
     display: flex;
     justify-content: space-around;
     width: 50%;
@@ -107,7 +53,7 @@ const Menu = styled.ul`
     }
 `;
 
-const Burger = styled.div`
+export const Burger = styled.div`
     display: none;
     height: 40px;
     width: 40px;
@@ -118,7 +64,7 @@ const Burger = styled.div`
     }
 `;
 
-const Left = styled.div`
+export const Left = styled.div`
     height: 450px;
     width: 45%;
     display: flex;
@@ -130,7 +76,7 @@ const Left = styled.div`
     }
 `;
 
-const Title = styled.h1`
+export const Title = styled.h1`
     font-family: ${(props) => props.theme.fonts.prymaryTitle};
     font-size: 70px;
     color: #fff;
@@ -148,7 +94,7 @@ const Title = styled.h1`
     }
 `;
 
-const Subtitle = styled.p`
+export const Subtitle = styled.p`
     width: 100%;
     text-align: right;
     font-size: 22px;
@@ -168,7 +114,7 @@ const Subtitle = styled.p`
     }
 `;
 
-const Resume = styled.div`
+export const Resume = styled.div`
     width: 210px;
     height: 60px;
     border-radius: 20px;
@@ -176,7 +122,7 @@ const Resume = styled.div`
     margin-right: 15%;
 `;
 
-const Button = styled.div`
+export const Button = styled.div`
     background-color: transparent;
     width: 210px;
     height: 60px;
@@ -210,7 +156,7 @@ const Button = styled.div`
     }
 `;
 
-const Right = styled.div`
+export const Right = styled.div`
     width: 35%;
     height: 450px;
     margin-right: 10%;
@@ -226,7 +172,7 @@ const Right = styled.div`
     }
 `;
 
-const Code1 = styled.p`
+export const Code1 = styled.p`
     font-family: ${(props) => props.theme.fonts.codehide};
     width: 300px;
     line-height: 26px;
@@ -243,7 +189,7 @@ const Code1 = styled.p`
     }
 `;
 
-const Code2 = styled.p`
+export const Code2 = styled.p`
     font-family: ${(props) => props.theme.fonts.codehide};
     width: 300px;
     line-height: 26px;
@@ -265,7 +211,7 @@ const Code2 = styled.p`
     }
 `;
 
-const SvgCurve = styled.div`
+export const SvgCurve = styled.div`
     position: absolute;
     bottom: -1px;
     left: 0;
@@ -274,7 +220,7 @@ const SvgCurve = styled.div`
     line-height: 0;
 `;
 
-const HeaderCurve = styled.svg`
+export const HeaderCurve = styled.svg`
     position: relative;
     display: block;
     width: calc(172% + 1.3px);
@@ -297,5 +243,3 @@ const HeaderCurve = styled.svg`
         height: 80px;
     }
 `;
-
-export default Hero;
