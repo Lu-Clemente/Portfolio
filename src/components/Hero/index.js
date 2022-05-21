@@ -3,8 +3,16 @@ import {
     Painel, Navegation, Menu, Burger,
     Info, Left, Title, Subtitle,
     Resume, Button, Right, Code1,
-    Code2, SvgCurve, HeaderCurve
-} from './styles'
+    Code2, SvgCurve, HeaderCurve, ButtonsWrapper,
+    LinkedIn
+} from './styles';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+    faFilePdf
+} from '@fortawesome/free-solid-svg-icons';
+import {
+    faLinkedin
+} from '@fortawesome/free-brands-svg-icons';
 
 const Hero = () => {
     return (
@@ -14,7 +22,7 @@ const Hero = () => {
                 <Menu>
                     <a href="#about"><li>Sobre</li></a>
                     <a href="#projects"><li>Projetos</li></a>
-                    <li>Contato</li>
+                    <a href="#contact"><li>Contato</li></a>
                 </Menu>
                 <Burger></Burger>
             </Navegation>
@@ -23,12 +31,28 @@ const Hero = () => {
 
                 <Left>
                     <Title>Luciene Clemente</Title>
+
                     <Subtitle>Desenvolvedora Front-end web e mobile</Subtitle>
-                    <Resume>
-                        <a href={"./assets/resume/Luciene-Clemente.pdf"} target="_blank" rel="noreferrer">
-                            <Button>Currículo</Button>
-                        </a>
-                    </Resume>
+
+                    <ButtonsWrapper>
+                        <Resume>
+                            <a href={"./assets/resume/Luciene-Clemente.pdf"} target="_blank" rel="noreferrer">
+                                <Button>
+                                    <FontAwesomeIcon icon={faFilePdf} className="items" />
+                                    Currículo
+                                </Button>
+                            </a>
+                        </Resume>
+
+                        <LinkedIn>
+                            <a href="https://www.linkedin.com/in/luciene-clemente/" target="_blank" rel="noreferrer">
+                                <Button>
+                                    <FontAwesomeIcon icon={faLinkedin} className="items" />
+                                    LinkedIn
+                                </Button>
+                            </a>
+                        </LinkedIn>
+                    </ButtonsWrapper>
                 </Left>
 
                 <Right>

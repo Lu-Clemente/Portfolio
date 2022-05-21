@@ -114,19 +114,30 @@ export const Subtitle = styled.p`
     }
 `;
 
-export const Resume = styled.div`
-    width: 210px;
-    height: 60px;
-    border-radius: 20px;
+export const ButtonsWrapper = styled.div`
     align-self: end;
-    margin-right: 15%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    margin-top: 100px;
+    width: 100%;
+`;
+
+export const LinkedIn = styled.div`
+    border-radius: 20px;
+    color: ${(props) => props.theme.colors.primary1};
+`;
+
+export const Resume = styled.div`
+    border-radius: 20px;
+    background-color: ${(props) => props.theme.colors.primary1};
+    color: ${(props) => props.theme.colors.background1};
 `;
 
 export const Button = styled.div`
     background-color: transparent;
     width: 210px;
     height: 60px;
-    margin: 100px 0 0 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -134,9 +145,12 @@ export const Button = styled.div`
     letter-spacing: 3px;
     border-radius: 20px;
     border: 2px solid ${(props) => props.theme.colors.primary1};
-    color: ${(props) => props.theme.colors.primary1};
     cursor: pointer;
     font-weight: 500;
+
+    .items {
+        margin-right: 15px;
+    }
 
     &:hover {
         background-color: ${(props) => props.theme.colors.primary1};
@@ -163,11 +177,8 @@ export const Right = styled.div`
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    /* position: relative; */
-    /* background-color: yellowgreen; */
 
     @media ${(props) => props.theme.breakpoints.md} {
-        /* width: 50vw; */
         width: 50%;
     }
 `;
