@@ -17,12 +17,8 @@ const About = ()=>{
         <Section>
 
             <Profile>
-
-                <Title>
-                    Conheça um pouco sobre mim
-                </Title>
+                <Title>Conheça um pouco sobre mim</Title>
                 <Picture src="./assets/img/profile.jpg" />
-
             </Profile>
             
             <Information>
@@ -37,9 +33,6 @@ const About = ()=>{
                         <Icons>
                             <FontAwesomeIcon icon="mobile-alt" style={{ width: "80px", height: "80px", }} />
                         </Icons>
-                        {/* <Icons>
-                            <FontAwesomeIcon icon={ faGithub } style={{ width: "80px", height: "80px", }} />
-                        </Icons> */}
                     </Devices>
 
                     <Description>
@@ -47,9 +40,9 @@ const About = ()=>{
                         <br /> <br />
                         Atuo como desenvolvedora web e mobile front-end.
                         <br />
-                        Tecnologias de conhecimento: <strong>JavaScript, NextJs, ReactJs, React Native, Dart, Flutter, HTML5 e CSS3.</strong>
+                        Tecnologias de conhecimento: <strong>Javascript, Typescript, ReactJs, React Native, NextJs, Dart, Flutter, GIT, HTML5 e CSS3.</strong>
                         <br />
-                        Logo a baixo você encontra alguns trabalhos e projetos meus. Você pode vê-los, visitá-los e em alguns, até mesmo encontrar o source code no meu perfil do Github.
+                        Logo a baixo você encontra alguns trabalhos e projetos meus. Você pode vê-los, visitá-los e em alguns, até mesmo encontrar o <em>source code</em> no meu perfil do Github.
                         <br/>
                         Sinta-se a vontade também para <a href="#contact"><em>entrar em contato comigo</em></a>.
                     </Description>
