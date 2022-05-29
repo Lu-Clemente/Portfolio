@@ -8,9 +8,16 @@ import {
 import {
     Container, Close, Times, Info,
     Slider, Wrapper, Arrows, ActiveImg
-} from './styles'
+} from './styles';
+import { ISliderData } from '../../Interfaces/ISliderData';
 
-const Modal = ({
+type Props = {
+    showModal: boolean;
+    setShowModal: (value: boolean) => void;
+    slides: ISliderData;
+}
+
+const Modal: React.FC<Props> = ({
     showModal,
     setShowModal,
     slides,

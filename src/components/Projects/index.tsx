@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import SVG from "../SVG";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-    faGithub,
     faHtml5,
     faCss3Alt,
     faReact,
@@ -13,7 +12,7 @@ import {
     Container, Proj1, Proj2, Proj3,
     Proj4, Proj5
 } from './styles';
-import { SliderData } from "../SliderData";
+import { SliderData } from "../../Data/SliderData";
 import Modal from "../Modal";
 
 const Projects = () => {
@@ -21,7 +20,7 @@ const Projects = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [sliderIndex, setSliderIndex] = useState(1);
 
-    const openModal = (i) => {
+    const openModal = (i: React.SetStateAction<number>) => {
         setIsOpen(!isOpen);
         setSliderIndex(i);
     }
@@ -38,14 +37,10 @@ const Projects = () => {
                 return SliderData[3];
             case 5:
                 return SliderData[4];
+            default:
+                return SliderData[0];
         }
     }
-
-    React.useEffect(() => {
-        console.log(isOpen);
-        console.log(sliderIndex);
-        console.log(handleSlider());
-    }, [sliderIndex, isOpen])
 
     return (
         <>
