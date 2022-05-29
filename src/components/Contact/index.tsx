@@ -1,34 +1,11 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faLinkedinIn, faGoogle, faCodepen } from '@fortawesome/free-brands-svg-icons';
 import {
     Wrapper, Title, Flex, ImageSVG,
     Resume, Button, Left, Right,
     ContactLink, Link
 } from './styles';
-
-const linksData = [
-    {
-        icon: faLinkedinIn,
-        link: "https://www.linkedin.com/in/luciene-clemente",
-        label: "/luciene-clemente"
-    },
-    {
-        icon: faGithub,
-        link: "https://github.com/Lu-Clemente",
-        label: "/Lu-Clemente"
-    },
-    {
-        icon: faGoogle,
-        link: "mailto:luclemente.dev@gmail.com",
-        label: "luclemente.dev@gmail.com"
-    },
-    {
-        icon: faCodepen,
-        link: "https://codepen.io/Lu-Clemente",
-        label: "/Lu-Clemente"
-    },
-]
+import { linksData } from "../../Data/LinksData";
 
 const Contact = () => {
 
