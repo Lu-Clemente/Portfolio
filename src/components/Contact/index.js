@@ -1,13 +1,36 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelopeOpen, faAngleRight
-} from '@fortawesome/free-solid-svg-icons';
-import { 
+import { faGithub, faLinkedinIn, faGoogle, faCodepen } from '@fortawesome/free-brands-svg-icons';
+import {
     Wrapper, Title, Flex, ImageSVG,
-    Resume, Button, Left, Right
-} from './styles'
+    Resume, Button, Left, Right,
+    ContactLink, Link
+} from './styles';
 
-const Contact = ()=>{
+const linksData = [
+    {
+        icon: faLinkedinIn,
+        link: "https://www.linkedin.com/in/luciene-clemente",
+        label: "/luciene-clemente"
+    },
+    {
+        icon: faGithub,
+        link: "https://github.com/Lu-Clemente",
+        label: "/Lu-Clemente"
+    },
+    {
+        icon: faGoogle,
+        link: "mailto:luclemente.dev@gmail.com",
+        label: "luclemente.dev@gmail.com"
+    },
+    {
+        icon: faCodepen,
+        link: "https://codepen.io/Lu-Clemente",
+        label: "/Lu-Clemente"
+    },
+]
+
+const Contact = () => {
 
     return (
         <Wrapper id="contact">
@@ -15,7 +38,6 @@ const Contact = ()=>{
             <Flex>
                 <Left>
 
-                    {/* <FontAwesomeIcon icon={ faEnvelopeOpen } className="item" /> */}
                     <ImageSVG src="./assets/img/undraw_message.svg" />
 
                     <Resume>
@@ -26,6 +48,16 @@ const Contact = ()=>{
 
                 </Left>
                 <Right>
+                    {
+                        linksData.map((elem, index) => (
+                            <a href={elem.link} target="_blank" key={index}>
+                                <ContactLink>
+                                    <FontAwesomeIcon icon={elem.icon} className="item" />
+                                    <Link>{elem.label}</Link>
+                                </ContactLink>
+                            </a>
+                        ))
+                    }
                 </Right>
             </Flex>
         </Wrapper>
