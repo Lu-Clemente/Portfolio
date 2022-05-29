@@ -7,8 +7,8 @@ export const Wrapper = styled.div`
     flex-direction: column;
 
     .item {
-        width: 150px;
-        height: 150px;
+        width: 80px;
+        height: 80px;
     }
 `;
 
@@ -78,7 +78,31 @@ export const Button = styled.div`
 
 export const Right = styled.div`
     height: 100%;
-    width: 400px;
     width: 50%;
-    /* background-color: dodgerblue; */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+`;
+
+export const ContactLink = styled.div`
+    display: flex;
+    gap: 15px;
+    align-items: flex-end;
+    cursor: pointer;
+    border: 2px solid ${(props) => props.theme.colors.secundary1};
+    padding: 15px 10px;
+    padding-left: 20px;
+    border-radius: 8px;
+
+    &:hover {
+        color: ${(props) => props.theme.colors.secundary1};
+        filter: brightness(110%) contrast(140%) saturate(115%);
+        transition-duration: .5s;
+    }
+`;
+
+export const Link = styled.span`
+    font-size: 25px;
+    margin-bottom: 10px;
 `;
