@@ -1,4 +1,6 @@
-export const SliderData = [
+import { ISliderData } from '../Interfaces/ISliderData';
+
+export const SliderData: Array<ISliderData> = [
     {
         url: "https://www.unor.com.br/",
         label: "Landing Page Unor - www.unor.com.br",
