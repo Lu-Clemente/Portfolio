@@ -50,7 +50,7 @@ const Contact = () => {
                 <Right>
                     {
                         linksData.map((elem, index) => (
-                            <a href={elem.link} target="_blank" key={index}>
+                            <a href={elem.link} target="_blank" rel="noreferrer" key={index}>
                                 <ContactLink>
                                     <FontAwesomeIcon icon={elem.icon} className="item" />
                                     <Link>{elem.label}</Link>
