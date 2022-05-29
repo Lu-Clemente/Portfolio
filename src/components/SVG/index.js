@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import { Next } from './styles'
 
 const SVG = ()=>{
     return (
@@ -18,10 +18,5 @@ const SVG = ()=>{
         </Next>
     );
 }
-
-const Next = styled.svg`
-    height: 50px;
-    width: 80px;
-`;
 
 export default SVG;
